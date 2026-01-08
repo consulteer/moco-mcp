@@ -8,13 +8,13 @@ Build the container and run the MCP server directly through Docker:
 
 ```bash
 # 1. Pull the published stdio MCP image (used by most clients)
-docker pull ghcr.io/migueltvms/moco-mcp-cli:latest
+docker pull ghcr.io/consulteer/moco-mcp-cli:latest
 
 # 2. Run the server (stdin/stdout transport) with your credentials
 docker run --rm -i \
   -e MOCO_API_KEY="your-moco-api-key" \
   -e MOCO_SUBDOMAIN="your-subdomain" \
-  ghcr.io/migueltvms/moco-mcp-cli:latest
+  ghcr.io/consulteer/moco-mcp-cli:latest
 ```
 
 Prefer HTTP? Use the dedicated image instead:
@@ -58,7 +58,7 @@ Add to your Claude Desktop claude_desktop_config.json file:
         "-i",
         "-e", "MOCO_API_KEY=your-moco-api-key",
         "-e", "MOCO_SUBDOMAIN=your-subdomain",
-        "ghcr.io/migueltvms/moco-mcp-cli:latest"
+        "ghcr.io/consulteer/moco-mcp-cli:latest"
       ]
     }
   }
@@ -87,7 +87,7 @@ Add to your Cursor settings:
         "-i",
         "-e", "MOCO_API_KEY=your-moco-api-key",
         "-e", "MOCO_SUBDOMAIN=your-subdomain",
-        "ghcr.io/migueltvms/moco-mcp-cli:latest"
+        "ghcr.io/consulteer/moco-mcp-cli:latest"
       ]
     }
   }
@@ -112,7 +112,7 @@ Add to your Windsurf MCP configuration:
         "-i",
         "-e", "MOCO_API_KEY=your-moco-api-key",
         "-e", "MOCO_SUBDOMAIN=your-subdomain",
-        "ghcr.io/migueltvms/moco-mcp-cli:latest"
+        "ghcr.io/consulteer/moco-mcp-cli:latest"
       ]
     }
   }
@@ -133,7 +133,7 @@ claude mcp add \
   moco -- docker run --rm -i \
   -e MOCO_API_KEY="your-moco-api-key" \
   -e MOCO_SUBDOMAIN="your-subdomain" \
-  ghcr.io/migueltvms/moco-mcp-cli:latest
+  ghcr.io/consulteer/moco-mcp-cli:latest
 ```
 
 </details>
@@ -154,7 +154,7 @@ Configure Gemini CLI with MCP support:
         "-i",
         "-e", "MOCO_API_KEY=your-moco-api-key",
         "-e", "MOCO_SUBDOMAIN=your-subdomain",
-        "ghcr.io/migueltvms/moco-mcp-cli:latest"
+        "ghcr.io/consulteer/moco-mcp-cli:latest"
       ]
     }
   }
@@ -183,7 +183,7 @@ Configure Gemini CLI with MCP support:
         "MOCO_API_KEY=your-moco-api-key",
         "-e",
         "MOCO_SUBDOMAIN=your-subdomain",
-        "ghcr.io/migueltvms/moco-mcp-cli:latest"
+        "ghcr.io/consulteer/moco-mcp-cli:latest"
       ],
       "disabled": false,
       "autoApprove": []
@@ -214,7 +214,7 @@ Configure Gemini CLI with MCP support:
         "-i",
         "-e", "MOCO_API_KEY=your-moco-api-key",
         "-e", "MOCO_SUBDOMAIN=your-subdomain",
-        "ghcr.io/migueltvms/moco-mcp-cli:latest"
+        "ghcr.io/consulteer/moco-mcp-cli:latest"
       ],
        "env": {
           "MOCO_API_KEY": "your-moco-api-key",
@@ -534,7 +534,7 @@ Summary:
 If you want to run from source:
 
 ```bash
-git clone https://github.com/MiguelTVMS/moco-mcp.git
+git clone https://github.com/consulteer/moco-mcp.git
 cd moco-mcp
 npm install
 npm run build
@@ -595,8 +595,8 @@ Build whichever image you need and run it with your MOCO credentials:
 
 ```bash
 # stdio (published image)
-docker pull ghcr.io/migueltvms/moco-mcp-cli:latest
-docker run --rm -i -e MOCO_API_KEY=... -e MOCO_SUBDOMAIN=... ghcr.io/migueltvms/moco-mcp-cli:latest
+docker pull ghcr.io/consulteer/moco-mcp-cli:latest
+docker run --rm -i -e MOCO_API_KEY=... -e MOCO_SUBDOMAIN=... ghcr.io/consulteer/moco-mcp-cli:latest
 
 # stdio (build from source)
 docker build -t moco-mcp .
@@ -635,10 +635,10 @@ MOCO_SUBDOMAIN should only contain the subdomain name
 **❌ Docker Image Not Found:**
 
 ```
-Unable to find image 'ghcr.io/migueltvms/moco-mcp-cli:latest' locally
+Unable to find image 'ghcr.io/consulteer/moco-mcp-cli:latest' locally
 ```
 
-- Pull the image first: `docker pull ghcr.io/migueltvms/moco-mcp-cli:latest`
+- Pull the image first: `docker pull ghcr.io/consulteer/moco-mcp-cli:latest`
 - Or double-check the tag you are referencing in your MCP client configuration.
 
 **❌ Environment Variables Missing:**
@@ -665,7 +665,7 @@ docker run --rm -i \
   -e NODE_ENV=development \
   -e MOCO_API_KEY="your-moco-api-key" \
   -e MOCO_SUBDOMAIN="your-subdomain" \
-  ghcr.io/migueltvms/moco-mcp-cli:latest
+  ghcr.io/consulteer/moco-mcp-cli:latest
 ```
 
 ### Testing Connection
@@ -677,7 +677,7 @@ printf '{"jsonrpc": "2.0", "id": 1, "method": "tools/list"}' | \
 docker run --rm -i \
   -e MOCO_API_KEY="your-moco-api-key" \
   -e MOCO_SUBDOMAIN="your-subdomain" \
-  ghcr.io/migueltvms/moco-mcp-cli:latest
+  ghcr.io/consulteer/moco-mcp-cli:latest
 ```
 
 ## 🌟 Features
@@ -706,7 +706,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 - **MOCO API Issues:** [MOCO API Documentation](https://github.com/hundertzehn/mocoapp-api-docs)
 - **MCP Protocol:** [MCP Documentation](https://modelcontextprotocol.io/)
-- **This Package:** [GitHub Issues](https://github.com/MiguelTVMS/moco-mcp/issues)
+- **This Package:** [GitHub Issues](https://github.com/consulteer/moco-mcp/issues)
 
 ## 🙏 Acknowledgements
 
