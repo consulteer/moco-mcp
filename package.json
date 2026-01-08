@@ -1,5 +1,5 @@
 {
-  "name": "@migueltvms/moco-mcp",
+  "name": "@consulteer/moco-mcp",
   "version": "1.3.1",
   "description": "Model Context Protocol (MCP) server for MOCO: time tracking, project management, holidays, and presence monitoring",
   "main": "dist/index.js",
@@ -46,16 +46,16 @@
   "author": {
     "name": "João Miguel Tabosa Vaz Marques Silva",
     "email": "joao@miguel.ms",
-    "url": "https://github.com/MiguelTVMS"
+    "url": "https://github.com/consulteer"
   },
   "license": "MIT",
-  "homepage": "https://github.com/MiguelTVMS/moco-mcp#readme",
+  "homepage": "https://github.com/consulteer/moco-mcp#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MiguelTVMS/moco-mcp.git"
+    "url": "https://github.com/consulteer/moco-mcp.git"
   },
   "bugs": {
-    "url": "https://github.com/MiguelTVMS/moco-mcp/issues"
+    "url": "https://github.com/consulteer/moco-mcp/issues"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.20.2",
